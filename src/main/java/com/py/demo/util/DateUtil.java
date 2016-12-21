@@ -33,10 +33,11 @@ public class DateUtil {
     }
 
     /**
+     * 获取时间格式为 yyyy-MM-dd
      * @return String
      * @throws Exception
      * @author Pablo
-     * Descrption:ȡ�õ�ǰ����getgetg get Date format Example：2008-05-15
+     * Descrption: get Date format Example：2008-05-15
      */
     public static String getDateLong(Date date) {
         String nowDate = "";
@@ -51,10 +52,11 @@ public class DateUtil {
     }
 
     /**
+     * 获取时间格式为 yyyy年MM月dd日
      * @return String
      * @throws Exception
      * @author Pablo
-     * Descrption:ȡ�õ�ǰ����getgetg get Date format Example：2008年-05月-15日
+     * Descrption: get Date format Example：2008年05月15日
      */
     public static String getDateLongCn(Date date) {
         String nowDate = "";
@@ -70,10 +72,11 @@ public class DateUtil {
 
 
     /**
+     * 获取 月份和日期 格式为MM月dd日
      * @return String
      * @throws Exception
      * @author vowo
-     * Descrption:ȡ�õ�ǰ����getgetg get Date format Example：05月-15日
+     * Descrption: get Date format Example：05月15日
      */
     public static String getDateMD(Date date) {
         String nowDate = "";
@@ -88,10 +91,11 @@ public class DateUtil {
     }
 
     /**
+     * 获取时间格式为 yyyy年MM月dd日 HH:mm
      * @return String
      * @throws Exception
      * @author Pablo
-     * Descrption:ȡ�õ�ǰ����getgetg get Date format Example：2008年-05月-15日 11:05
+     * Descrption: get Date format Example：2008年05月15日 11:05
      */
     public static String getDateShortLongTimeCn(Date date) {
         String nowDate = "";
@@ -106,10 +110,11 @@ public class DateUtil {
     }
 
     /**
+     * 获取格式为  Dec 21,2016(年月日)
      * @return String
      * @throws Exception
      * @author Pablo
-     * Descrption:ȡ�õ�ǰ����getgetg get Date format Example：Aug 28, 2007
+     * Descrption: get Date format Example：Aug 28, 2007
      */
     public static String getDateUS(Date date) {
         String nowDate = "";
@@ -124,10 +129,11 @@ public class DateUtil {
     }
 
     /**
+     * 获取时间格式为 Dec 21（月份和日期）
      * @return String
      * @throws Exception
      * @author Pablo
-     * Descrption:ȡ�õ�ǰ����getgetg get Date format Example：Aug 28, 2007
+     * Descrption: get Date format Example：Aug 28, 2007
      */
     public static String getDateUSShort(Date date) {
         String nowDate = "";
@@ -2357,7 +2363,6 @@ public class DateUtil {
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
         return sdf.format(date);
     }
-    //
 
     public static String addValidateDate(String date, String into) throws Exception {
         String Sdate = "";
@@ -2406,6 +2411,12 @@ public class DateUtil {
         return date;
     }
 
+    /**
+     * 获得几天后的时间
+     * @param date
+     * @param days
+     * @return
+     */
     public static Date dateDayAdd(Date date, int days) {
         long now = date.getTime() + (long) days * DAY_IN_MILLISECOND;
         return new Date(now);
