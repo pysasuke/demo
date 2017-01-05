@@ -28,7 +28,7 @@ public class ExceptionInterceptor extends HandlerInterceptorAdapter {
             throws Exception {
         if (ex != null) {
             String msg = "";
-            if (ex instanceof ServiceException) {
+            if (ex instanceof ServiceException) { //自定义异常(异常统一处理Service)
                 msg = ex.getMessage();
             } else if (ex instanceof NullPointerException) {
                 msg = "空指针异常";

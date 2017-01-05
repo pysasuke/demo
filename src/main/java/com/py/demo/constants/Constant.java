@@ -7,5 +7,4 @@ public class Constant {
 
     public static String DEV_MODE = "false";
 
-
 }

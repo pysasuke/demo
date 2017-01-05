@@ -22,7 +22,7 @@
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
-    <!--注解方式-->
+    <!--注解方式(处理请求)-->
     <mvc:annotation-driven/>
 
     <!-- Configures Handler Interceptors 拦截器-->
@@ -57,14 +57,54 @@
     <mvc:resources mapping="css/**" location="/css/"/>
     <mvc:resources mapping="js/**" location="/js/"/>
     <mvc:resources mapping="/swagger/**" location="/WEB-INF/swagger/"/>
-    <mvc:resources mapping="/erp/**" location="/WEB-INF/erp/"/>
+    <mvc:resources mapping="/bootstrap/**" location="/WEB-INF/bootstrap/"/>
+    <mvc:resources mapping="/blog/**" location="/WEB-INF/blog/"/>
+    <!--<mvc:resources mapping="/template/**" location="/WEB-INF/template/"/>-->
 
     <!--swagger-->
     <!--<context:component-scan base-package="com.py.test.swagger"/>-->
 
+    <!--freemarker Begin-->
+    <!-- freemarker的配置 -->
+    <bean id="freemarkerConfig"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <!-- 模版位置，这里配置了下面就不用配了 -->
+        <property name="templateLoaderPath" value="\WEB-INF\template"/>
+        <property name="freemarkerSettings"><!-- 一些设置 -->
+            <props>
+                <prop key="template_update_delay">0</prop>
+                <prop key="default_encoding">UTF-8</prop>
+                <prop key="number_format">0.##########</prop>
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+                <prop key="classic_compatible">true</prop>
+                <prop key="template_exception_handler">ignore</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- freeMarker视图解析器 -->
+    <bean id="freemarkerViewResolver"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"
+        />
+        <property name="viewNames" value="*.ftl"/>
+        <property name="contentType" value="text/html; charset=utf-8"/>
+        <property name="cache" value="true"/>
+        <property name="suffix" value=""/>
+        <!--    作用百度即可
+            <property name="exposeRequestAttributes" value="true" />
+            <property name="exposeSessionAttributes" value="true" />
+            <property name="exposeSpringMacroHelpers" value="true" />
+        -->
+        <!-- 视图先走这个freemarker的，再走原始的 -->
+        <property name="order" value="0"/>
+    </bean>
+    <!--freemarker End-->
+
     <!-- 定义跳转的文件的前后缀 ，视图模式配置-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!-- 这里的配置我的理解是自动给后面action的方法return的字符串加上前缀和后缀，变成一个 可用的url地址 -->
+        <property name="order" value="1"/><!-- 增加一个属性，如果找不到freemarker的模版则走原始的 -->
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>

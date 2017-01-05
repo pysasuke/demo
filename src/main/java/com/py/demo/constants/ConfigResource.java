@@ -21,10 +21,10 @@ public class ConfigResource {
 
 
     @PostConstruct
-    public void init(){//初始化
-        if(StringUtils.isNotBlank(mipushDebug) && mipushDebug.equals("true")){
+    public void init() {//初始化
+        if (StringUtils.isNotBlank(mipushDebug) && mipushDebug.equals("true")) {
             //// TODO: 2016/12/21  
-        }else {
+        } else {
             //// TODO: 2016/12/21
         }
 

@@ -24,7 +24,7 @@ public class TestRedis {
     @Test
     public void test() {
         cache.putCacheWithExpireTime("what", "1", 60);
-        String s =cache.getCache("what",String.class);
+        String s = cache.getCache("what", String.class);
         System.out.println(s);
     }
 

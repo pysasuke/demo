@@ -7,27 +7,27 @@ package com.py.demo.util;
 public class FormatUtil {
 
 
-    public static String formatNullString(String str){
-        if(null == str){
+    public static String formatNullString(String str) {
+        if (null == str) {
             return "";
-        }else {
+        } else {
             return str.trim();
         }
     }
 
 
-    public static int formatNullInteger(Integer number){
-        if(null == number){
+    public static int formatNullInteger(Integer number) {
+        if (null == number) {
             return -1;
-        }else {
+        } else {
             return number;
         }
     }
 
-    public static long formatNullLong(Long number){
-        if(null == number){
+    public static long formatNullLong(Long number) {
+        if (null == number) {
             return -1L;
-        }else {
+        } else {
             return number;
         }
     }

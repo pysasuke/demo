@@ -311,6 +311,20 @@
             <version>4.5.1</version>
         </dependency>
 
+        <!--集成工具类吧-->
+        <dependency>
+            <groupId>com.xiaoleilu</groupId>
+            <artifactId>hutool</artifactId>
+            <version>2.15.19</version>
+        </dependency>
+
+        <!--使用ftl文件-->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.23</version>
+        </dependency>
+
     </dependencies>
 
 </project>

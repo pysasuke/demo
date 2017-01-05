@@ -2,7 +2,9 @@ package com.py.demo.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
-import org.apache.http.*;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
@@ -11,7 +13,6 @@ import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
@@ -21,7 +22,7 @@ import java.nio.charset.Charset;
 import java.util.List;
 
 @Slf4j
-@Component
+//@Component
 public class HttpUtil {
 
     public String executeGet(String url) {
@@ -32,9 +33,9 @@ public class HttpUtil {
         HttpGet httpget = new HttpGet(url);
         httpget.setHeader("Accept-Charset", "utf-8");
 
-        if(!CollectionUtils.isEmpty(headers)){
+        if (!CollectionUtils.isEmpty(headers)) {
             for (NameValuePair pair : headers) {
-                if(null != pair){
+                if (null != pair) {
                     httpget.setHeader(pair.getName(), pair.getValue());
                 }
             }
@@ -42,7 +43,7 @@ public class HttpUtil {
 
         return this.execute(httpget);
     }
-    
+
     public String executePost(String url, List<NameValuePair> params) {
         return this.executePost(url, params, null);
     }
@@ -54,9 +55,9 @@ public class HttpUtil {
             httppost.setEntity(new UrlEncodedFormEntity(params, Charset.forName("UTF-8")));
         }
 
-        if(!CollectionUtils.isEmpty(headers)){
+        if (!CollectionUtils.isEmpty(headers)) {
             for (NameValuePair pair : headers) {
-                if(null != pair){
+                if (null != pair) {
                     httppost.setHeader(pair.getName(), pair.getValue());
                 }
             }

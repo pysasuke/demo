@@ -11,7 +11,7 @@ import java.util.Date;
 public class TestDateUtil {
 
     @Test
-    public void test(){
+    public void test() {
 //        System.out.println(DateUtil.getDateLong(new Date()));
 //        System.out.println(DateUtil.getDateLongCn(new Date()));
 //        System.out.println(DateUtil.getDateMD(new Date()));
@@ -21,6 +21,6 @@ public class TestDateUtil {
 
         System.out.println(DateUtil.getNowDayStr(new Date()));
 
-        System.out.println(DateUtil.dateDayAdd(new Date(),1));
+        System.out.println(DateUtil.dateDayAdd(new Date(), 1));
     }
 }

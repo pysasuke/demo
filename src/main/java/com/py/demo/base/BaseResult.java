@@ -14,6 +14,14 @@ public class BaseResult {
         this.msg = CommonEnum.PROTOCOL_RESPONSE_STATUS.SUCCEED.name();
     }
 
+    public BaseResult(Object data) {
+        this.status = CommonEnum.PROTOCOL_RESPONSE_STATUS.SUCCEED.getValue();
+        this.msg = CommonEnum.PROTOCOL_RESPONSE_STATUS.SUCCEED.name();
+        this.data = data == null ? "" : data;
+
+    }
+
+
     public BaseResult(String status, String msg) {
         this.status = status;
         this.msg = msg;
@@ -52,4 +60,6 @@ public class BaseResult {
     public void setdata(Object data) {
         this.data = data;
     }
+
+
 }

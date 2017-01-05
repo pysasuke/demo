@@ -23,4 +23,12 @@
         <constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
     </bean>
 
+    <bean id="mongoUserDao" class="com.py.demo.tool.mongo.impl.MongoUserDao">
+    </bean>
+    <!--<bean id="userRepository" class="com.py.demo.tool.mongo.impl.UserRepository">-->
+    <!--<property name="mongoTemplate" ref="mongoTemplate" />-->
+    <!--</bean>-->
+    <!--<context:annotation-config />-->
+
+
 </beans>

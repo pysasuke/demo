@@ -4,13 +4,11 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class StringEncrypt {
-	 /**
+    /**
      * 对字符串加密,加密算法使用MD5,SHA-1,SHA-256,默认使用SHA-256
-     * 
-     * @param strSrc
-     *            要加密的字符串
-     * @param encName
-     *            加密类型
+     *
+     * @param strSrc  要加密的字符串
+     * @param encName 加密类型
      * @return
      */
     public static String Encrypt(String strSrc, String encName) {
@@ -47,5 +45,5 @@ public class StringEncrypt {
     public static void main(String[] args) {
         System.out.println(StringEncrypt.Encrypt("123456", null));
     }
-    
+
 }
