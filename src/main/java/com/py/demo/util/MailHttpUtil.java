@@ -53,7 +53,7 @@ public class MailHttpUtil {
             if (status == 200) {
                 logger.info("邮件接口调用成功");
             } else {
-                logger.info("邮件接口调用成功");
+                logger.info("邮件接口调用失败");
             }
             JSONObject obj = JSONObject.fromObject(result.toString());
             if (obj.containsKey("message")) {

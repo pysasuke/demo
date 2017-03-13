@@ -20,7 +20,7 @@ public class UserServicre {
     public int insert(User user) {
 
         //MD5加密
-        user.setPassword(CommonUtil.EncoderByMd5(user.getPassword()));
+        user.setPassword(CommonUtil.encoderByMd5(user.getPassword()));
 
         return userMapper.insert(user);
     }
@@ -36,7 +36,7 @@ public class UserServicre {
     }
 
     private boolean checkPassword(String loginPwd, String dbPwd) {
-        if (CommonUtil.EncoderByMd5(loginPwd).equals(dbPwd)) {
+        if (CommonUtil.encoderByMd5(loginPwd).equals(dbPwd)) {
             return true;
         } else {
             return false;

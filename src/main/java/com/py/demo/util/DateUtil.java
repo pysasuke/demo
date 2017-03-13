@@ -1932,7 +1932,7 @@ public class DateUtil {
     //-----------------------------------------------------------------------
 
     /**
-     * Gets the array of SimpleDateFormats that DateUtil knows about.
+     * Gets the array of SimpleDateFormats that dateUtil knows about.
      **/
     private static SimpleDateFormat[] getFormats() {
         return mDateFormats;
@@ -2026,7 +2026,7 @@ public class DateUtil {
         if (StringUtil.isEmpty(aValue))
             return null;
 
-        // get DateUtil's formats
+        // get dateUtil's formats
         SimpleDateFormat formats[] = DateUtil.getFormats();
         if (formats == null)
             return null;
@@ -2452,40 +2452,40 @@ public class DateUtil {
         try {
             System.out.println(DateUtil.toDayToStr("yyyy年MM月dd日"));
 
-            //			System.out.println("我的年龄：" + DateUtil.getAge("210202720508171"));
-            //			System.out.println("我的年龄：" + DateUtil.getAge("210202197205081712"));
+            //			System.out.println("我的年龄：" + dateUtil.getAge("210202720508171"));
+            //			System.out.println("我的年龄：" + dateUtil.getAge("210202197205081712"));
             //			int x = 31;
-            //			java.sql.Date date = DateUtil.getDateByAge(x);
+            //			java.sql.Date date = dateUtil.getDateByAge(x);
             //			System.out.println("31岁人的出生日期：" + date.toString());
             //			System.out.println(
-            //				"========getYearMonth:" + DateUtil.getYearAndMonth("200406"));
-            //			System.out.println("====" + DateUtil.month2YearMonth("15"));
+            //				"========getYearMonth:" + dateUtil.getYearAndMonth("200406"));
+            //			System.out.println("====" + dateUtil.month2YearMonth("15"));
             //			System.out.println(
             //				"========increaseMonth: "
-            //					+ DateUtil.increaseMonth(DateUtil.getCurrentDate(), 2));
+            //					+ dateUtil.increaseMonth(dateUtil.getCurrentDate(), 2));
 
             //						Date data = new Date();
             //						System.out.println(data);
             //						System.out.println(
-            //							"测试==" + DateUtil.dateToString(data, "YYYY-MM-DD HH24:MI:SS"));
+            //							"测试==" + dateUtil.dateToString(data, "YYYY-MM-DD HH24:MI:SS"));
 
             //			Date newdate = new Date();
-            //			System.out.println(DateUtil.parseFromFormats(sdata));
+            //			System.out.println(dateUtil.parseFromFormats(sdata));
             //			String sdata = "2005-01-01";
             //			System.out.println(
-            //				DateUtil.stringToDate(sdata, "YYYY-MM-DD"));
+            //				dateUtil.stringToDate(sdata, "YYYY-MM-DD"));
             //			Date nowDate1 = new Date();
             //			Date nowDate2 = new Date();
             //			System.out.println("nowDate1" + nowDate1);
             //			System.out.println("nowDate2" + nowDate2);
-            //			System.out.println(DateUtil.daysBetweenDates(nowDate1,nowDate2));
+            //			System.out.println(dateUtil.daysBetweenDates(nowDate1,nowDate2));
             //			System.out.println(
-            //				"加上50天==" + DateUtil.getSpecDate("yyyy/MM/dd", 0, 0, 50));
+            //				"加上50天==" + dateUtil.getSpecDate("yyyy/MM/dd", 0, 0, 50));
             //			System.out.println(
-            //				DateUtil.getDefaultFormattedDate(
-            //					DateUtil.getSpecDate("yyyy/MM/dd", 0, 0, 50)));
+            //				dateUtil.getDefaultFormattedDate(
+            //					dateUtil.getSpecDate("yyyy/MM/dd", 0, 0, 50)));
             //			System.out.println(
-            //				"add 50 days" + DateUtil.increaseDay(new Date(), 365));
+            //				"add 50 days" + dateUtil.increaseDay(new Date(), 365));
             System.out.println(getDateShortLongTimeCn(new Date()));
             System.out.println(null + "1");
             System.out.println(convertDateToDay(new Date()));
@@ -2529,7 +2529,7 @@ public class DateUtil {
         Calendar c = Calendar.getInstance();
         int i = c.get(Calendar.DAY_OF_WEEK);
         System.out.println(i);
-//		String strTemp = DateUtil.getFomartDate(date, "yyyyMMddHHmmss");
+//		String strTemp = dateUtil.getFomartDate(date, "yyyyMMddHHmmss");
 //		String nowTime = strTemp.substring(8,14);
         return "";
     }

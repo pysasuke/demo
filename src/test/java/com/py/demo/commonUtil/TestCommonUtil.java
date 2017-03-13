@@ -1,4 +1,4 @@
-package com.py.demo.CommonUtil;
+package com.py.demo.commonUtil;
 
 import com.py.demo.model.User;
 import com.py.demo.util.CommonUtil;
@@ -33,13 +33,13 @@ public class TestCommonUtil {
 
     @Test
     public void testEncoderByMd5() {
-        String s = CommonUtil.EncoderByMd5("123456");
+        String s = CommonUtil.encoderByMd5("123456");
         System.out.println(s);
     }
 
     @Test
     public void testEncoderPwdByMd5() {
-        String s = CommonUtil.EncoderPwdByMd5("123456");
+        String s = CommonUtil.encoderPwdByMd5("123456");
         System.out.println(s);
     }
 
@@ -87,7 +87,7 @@ public class TestCommonUtil {
         List<User> userlist = new ArrayList<User>();
         userlist.add(user1);
         userlist.add(user2);
-//        String s = CommonUtil.listToJsonString(userlist);
+//        String s = commonUtil.listToJsonString(userlist);
         System.out.println(userlist.toString());
     }
 

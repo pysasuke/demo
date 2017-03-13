@@ -1,4 +1,4 @@
-package com.py.demo.Interceptor;
+package com.py.demo.interceptor;
 
 import com.py.demo.service.UserServicre;
 import org.junit.Test;

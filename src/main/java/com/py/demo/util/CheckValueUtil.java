@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 
 /**
  * Created by zczhao on 16/4/18.
+ * 验证手机号和图片格式
  */
 public class CheckValueUtil {
 
