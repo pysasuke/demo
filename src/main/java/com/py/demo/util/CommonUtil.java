@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * ��ͨ������
+ *
  *
  * @author ganfeng
  */
@@ -87,7 +87,7 @@ public class CommonUtil {
      * @param plainText
      * @return
      */
-    public static String EncoderByMd5(String plainText) {
+    public static String encoderByMd5(String plainText) {
         String md5str = "";
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
@@ -113,7 +113,7 @@ public class CommonUtil {
         return md5str;
     }
 
-    public static String EncoderPwdByMd5(String str) {
+    public static String encoderPwdByMd5(String str) {
         String newstr = null;
         try {
             MessageDigest md5 = MessageDigest.getInstance("MD5");
@@ -332,8 +332,8 @@ public class CommonUtil {
      * ����������������֮���������
      */
 //	public static int getDifDays(String date1, String date2) {
-//		Date date_1 = DateUtil.getDate(date1);
-//		Date date_2 = DateUtil.getDate(date2);
+//		Date date_1 = dateUtil.getDate(date1);
+//		Date date_2 = dateUtil.getDate(date2);
 //
 //		long time1 = date_1.getTime();
 //		long time2 = date_2.getTime();

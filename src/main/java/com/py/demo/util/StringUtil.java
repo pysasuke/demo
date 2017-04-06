@@ -236,7 +236,7 @@ public class StringUtil {
     /**
      * 判断一个字符串是否为 NUll 或为空
      *
-     * @param inStr inStr
+     * @param str str
      * @return boolean
      */
     public static boolean checkNotNull(String str) {
@@ -667,7 +667,7 @@ public class StringUtil {
      * @param value
      * @return
      */
-    public static List<String> StringToList(String value, String exp) {
+    public static List<String> stringToList(String value, String exp) {
         List<String> resultList = new ArrayList<String>();
         String[] vals = split(value, exp);
         for (String val : vals) {

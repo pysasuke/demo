@@ -1,4 +1,4 @@
-package com.py.demo.MailUtil;
+package com.py.demo.mailUtil;
 
 import com.py.demo.util.Mail;
 import org.junit.Test;

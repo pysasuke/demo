@@ -11,7 +11,7 @@ public class StringEncrypt {
      * @param encName 加密类型
      * @return
      */
-    public static String Encrypt(String strSrc, String encName) {
+    public static String encrypt(String strSrc, String encName) {
         MessageDigest md = null;
         String strDes = null;
 
@@ -43,7 +43,7 @@ public class StringEncrypt {
     }
 
     public static void main(String[] args) {
-        System.out.println(StringEncrypt.Encrypt("123456", null));
+        System.out.println(StringEncrypt.encrypt("123456", null));
     }
 
 }
