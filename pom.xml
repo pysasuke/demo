@@ -5,7 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>py</groupId>
-    <artifactId>py_test</artifactId>
+    <artifactId>demo</artifactId>
+    <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <properties>
         <!-- 主要依赖库的版本定义 -->
@@ -194,20 +195,6 @@
             <version>1.2</version>
         </dependency>
 
-
-        <!--redis+tomcat8共享session-->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-pool2</artifactId>
-            <version>2.4.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>2.7.3</version>
-        </dependency>
-
         <!-- mangodb -->
         <dependency>
             <groupId>org.springframework.data</groupId>
@@ -220,6 +207,13 @@
             <groupId>org.mongodb</groupId>
             <artifactId>mongo-java-driver</artifactId>
             <version>3.0.2</version>
+        </dependency>
+
+        <!--redis+tomcat8共享session-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+            <version>2.4.2</version>
         </dependency>
 
         <!--redis-->
@@ -326,5 +320,8 @@
         </dependency>
 
     </dependencies>
+    <build>
+        <finalName>demo</finalName>
+    </build>
 
 </project>
