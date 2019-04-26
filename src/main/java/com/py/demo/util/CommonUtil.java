@@ -446,7 +446,7 @@ public class CommonUtil {
     }
 
     public static void main(String[] args) {
-        System.out.println(StringEncrypt.Encrypt("e10adc3949ba59abbe56e057f20f883e", null));
+        System.out.println(StringEncrypt.encrypt("e10adc3949ba59abbe56e057f20f883e", null));
 
     }
 }
